@@ -1,0 +1,67 @@
+CUSTOMER
+
+package com.ex;
+
+
+public class Customer {
+	private int cid;
+	private String cname;
+    private int fkvid;
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+	public String getCname() {
+		return cname;
+	}
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public int getFkvid() {
+		return fkvid;
+	}
+	public void setFkvid(int fkvid) {
+		this.fkvid = fkvid;
+	}
+    
+}
+
+
+
+
+VENDOR
+
+package com.ex;
+
+import java.util.Set;
+
+public class Vendor {
+	private int vid;
+	private String vname;
+	private Set c_obj;
+	public int getVid() {
+		return vid;
+	}
+	public void setVid(int vid) {
+		this.vid = vid;
+	}
+	public String getVname() {
+		return vname;
+	}
+	public void setVname(String vname) {
+		this.vname = vname;
+	}
+	public Set getC_obj() {
+		return c_obj;
+	}
+	public void setC_obj(Set c_obj) {
+		this.c_obj = c_obj;
+	}
+
+}
+
+
+
+
