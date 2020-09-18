@@ -1,0 +1,38 @@
+VENDOR
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+	<hibernate-mapping>
+<class name="com.ex.Vendor" table="vendor">
+<id name="vid" column="vid"/>
+<property name="vname" column="vname"/>
+  
+ <set name="c_obj" cascade="all">
+ <key column="fkvid"/>
+ <one-to-many class="com.ex.Customer"/>
+ 
+ </set> 
+</class>
+
+
+
+</hibernate-mapping>
+
+
+
+CUSTOMER
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+	<hibernate-mapping>
+<class name="com.ex.Customer" table="customer">
+<id name="cid" column="cid"/>
+<property name="cname" column="cname"/>
+<property name="fkvid" column="fkvid" insert="false"></property>
+</class>
+
+</hibernate-mapping>
